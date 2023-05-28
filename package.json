@@ -1,0 +1,11 @@
+{
+  "name": "pomodoro-timer",
+  "version": "1.0.0",
+  "description": "missing vanilla JS, this quick small project is a nice refresher",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lakhdar hafsi",
+  "license": "ISC"
+}

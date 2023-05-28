@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,700;1,600&display=swap");
+
+* {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+}
+a {
+          text-decoration: none;
+          color: #7f8c8d;
+}
+.container {
+          display: flex;
+          height: 80vh;
+          max-width: 400px;
+          margin: 5vh auto;
+          align-items: center;
+          justify-content: center;
+          gap: 2.6rem;
+          flex-direction: column;
+          padding: 20px;
+          font-family: "Roboto Mono", monospace;
+          background-color: #dadcdb;
+          border-radius: 10px;
+          position: relative;
+}
+.title {
+          font-size: 36px;
+          margin-bottom: 10px;
+          margin: 40px 10px auto 10px;
+          color: #2c3e50;
+}
+.timer {
+          font-size: 72px;
+          color: #2c3e50;
+          background-color: #f2f2f2;
+          box-shadow: 1px 2px 10px #2c3e50;
+          padding: 10px;
+          border-radius: 10px;
+}
+.button-wrapper {
+          display: flex;
+          flex-direction: column;
+          min-width: 80%;
+}
+button {
+          padding: 10px 20px;
+          margin: 10px;
+          color: #fefefe;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+          text-transform: uppercase;
+          transition: opacity ease-in 0.3s;
+          font-family: "Roboto Mono", monospace;
+          font-weight: bold;
+}
+button:hover {
+          opacity: 0.7;
+}
+
+#start {
+          background-color: #27ae60;
+}
+#stop {
+          background-color: #c0392b;
+}
+#reset {
+          background-color: #7f8c8d;
+}
+.social {
+          /*   margin-top: auto; */
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 10px;
+          width: 50%;
+          min-height: 30px;
+          background-color: #fefefe;
+          border-radius: 10px;
+          font-size: 22px;
+          color: #7f8c8d;
+          box-shadow: 1px 2px 10px #2c3e50;
+}
+.social i {
+          cursor: pointer;
+          transition: all ease-in 0.3s;
+}
+.social i:hover {
+          transform: scale(1.12);
+}
+.rights {
+          transition: ease-in 0.3s;
+}
+.rights a:hover {
+          color: #2c3e50;
+}
+#stopButton {
+          font-size: 30px;
+          background-color: black;
+          visibility: hidden;
+          text-align: center;
+          z-index: 100;
+          margin-bottom: 30px;
+          /*      height: 0; */
+          /*     animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) 6
+                    both; */
+}
+
+/* @-webkit-keyframes scale-up-center {
+          0% {
+                    -webkit-transform: scale(0.5);
+                    transform: scale(0.5);
+          }
+          100% {
+                    -webkit-transform: scale(1);
+                    transform: scale(1);
+          }
+}
+@keyframes scale-up-center {
+          0% {
+                    -webkit-transform: scale(0.5);
+                    transform: scale(0.5);
+          }
+          100% {
+                    -webkit-transform: scale(1);
+                    transform: scale(1);
+          }
+} */
+
+/* responsive */
+@media screen and (min-width: 768px) {
+          .button-wrapper {
+                    flex-direction: row;
+                    justify-content: space-between; /* Adjust as per your requirements */
+          }
+}
