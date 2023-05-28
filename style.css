@@ -6,7 +6,6 @@
           box-sizing: border-box;
 }
 body {
-          background-color: #837960;
           background-image: url(/images/wallpaper1.jpg);
           background-repeat: no-repeat;
           background-size: cover;
@@ -178,19 +177,30 @@ button:hover {
                     justify-content: space-between; /* Adjust as per your requirements */
           }
           .container {
-                    min-height: 80vh;
+                    /*       min-height: 80vh; */
           }
 }
 
 @media screen and (max-width: 767px) {
+          .container {
+                    min-height: 90vh;
+                    max-width: 300px;
+          }
+          .title {
+                    font-size: 28px;
+                    text-align: center;
+
+                    margin-top: 0;
+          }
+
           .button-wrapper {
                     flex-direction: column;
                     justify-content: space-between; /* Adjust as per your requirements */
-                    margin-top: -70px;
+                    margin-top: -100px;
+                    margin-bottom: 20px;
+                    width: 90%;
           }
-          .container {
-                    min-height: 80vh;
-          }
+
           .nav {
                     position: absolute;
                     width: 100vw;
