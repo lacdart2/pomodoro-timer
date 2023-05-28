@@ -5,24 +5,67 @@
           padding: 0;
           box-sizing: border-box;
 }
+body {
+          background-color: #837960;
+          background-image: url(/images/wallpaper1.jpg);
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
+          position: relative;
+}
+
+/* .nav {
+          position: absolute;
+          top: -40px;
+          left: 0;
+          bottom: 0;
+          width: 150px;
+          height: 90vh;
+          background-color: rgba(0, 0, 0, 0.5);
+          padding: 10px;
+}
+
+.nav ul {
+          list-style-type: none;
+          padding: 0;
+          margin: 0;
+}
+
+.nav li {
+          margin-bottom: 10px;
+}
+
+.nav a {
+          display: block;
+          padding: 8px;
+          background-color: #ddd;
+          text-decoration: none;
+          color: #333;
+}
+
+.nav a:hover {
+          background-color: #aaa;
+          color: #fff;
+}*/
 a {
           text-decoration: none;
           color: #7f8c8d;
 }
 .container {
+          position: relative;
           display: flex;
           height: 80vh;
           max-width: 400px;
           margin: 5vh auto;
           align-items: center;
           justify-content: center;
-          gap: 2.6rem;
+          gap: 1rem;
           flex-direction: column;
           padding: 20px;
           font-family: "Roboto Mono", monospace;
           background-color: #dadcdb;
           border-radius: 10px;
-          position: relative;
+          box-shadow: 1px 2px 10px #2c3e50;
 }
 .title {
           font-size: 36px;
@@ -35,7 +78,7 @@ a {
           color: #2c3e50;
           background-color: #f2f2f2;
           box-shadow: 1px 2px 10px #2c3e50;
-          padding: 10px;
+          padding: 10px 20px;
           border-radius: 10px;
 }
 .button-wrapper {
@@ -73,12 +116,12 @@ button:hover {
           display: flex;
           align-items: center;
           justify-content: center;
-          gap: 10px;
+          gap: 20px;
           width: 50%;
           min-height: 30px;
           background-color: #fefefe;
           border-radius: 10px;
-          font-size: 22px;
+          font-size: 20px;
           color: #7f8c8d;
           box-shadow: 1px 2px 10px #2c3e50;
 }
@@ -87,10 +130,11 @@ button:hover {
           transition: all ease-in 0.3s;
 }
 .social i:hover {
-          transform: scale(1.12);
+          transform: scale(1.225);
 }
-.rights {
+.rights a {
           transition: ease-in 0.3s;
+          font-size: 13px;
 }
 .rights a:hover {
           color: #2c3e50;
@@ -102,12 +146,11 @@ button:hover {
           text-align: center;
           z-index: 100;
           margin-bottom: 30px;
-          /*      height: 0; */
-          /*     animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) 6
-                    both; */
+          animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) 6
+                    both;
 }
 
-/* @-webkit-keyframes scale-up-center {
+@-webkit-keyframes scale-up-center {
           0% {
                     -webkit-transform: scale(0.5);
                     transform: scale(0.5);
@@ -126,12 +169,42 @@ button:hover {
                     -webkit-transform: scale(1);
                     transform: scale(1);
           }
-} */
+}
 
 /* responsive */
 @media screen and (min-width: 768px) {
           .button-wrapper {
                     flex-direction: row;
                     justify-content: space-between; /* Adjust as per your requirements */
+          }
+          .container {
+                    min-height: 80vh;
+          }
+}
+
+@media screen and (max-width: 767px) {
+          .button-wrapper {
+                    flex-direction: column;
+                    justify-content: space-between; /* Adjust as per your requirements */
+                    margin-top: -70px;
+          }
+          .container {
+                    min-height: 80vh;
+          }
+          .nav {
+                    position: absolute;
+                    width: 100vw;
+                    height: 80px;
+                    bottom: 0;
+                    left: 0;
+                    background-color: rgba(0, 0, 0, 0.5);
+                    padding: 10px;
+                    display: none;
+          }
+          .nav ul {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: row;
           }
 }
