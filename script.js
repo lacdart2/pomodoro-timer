@@ -9,7 +9,7 @@ const resetElement = document.getElementById("reset")
 
 
 let interval;
-let timeLeft = 8;
+let timeLeft = 1500;
 
 function updateTimer() {
     let minutes = Math.floor(timeLeft / 60);
@@ -45,8 +45,25 @@ function startTimer() {
     interval = setInterval(() => {
         timeLeft--;
         updateTimer()
-
-        if (timeLeft === 0) {
+        if (timeLeft === 2000) {
+            document.body.style.backgroundImage = "url('images/bg-2000.jpg')";
+        }
+        else if (timeLeft === 1300) {
+            document.body.style.backgroundImage = "url('images/bg-1300.jpg')";
+        }
+        else if (timeLeft === 1000) {
+            document.body.style.backgroundImage = "url('images/bg-1000.jpg')";
+        }
+        else if (timeLeft === 800) {
+            document.body.style.backgroundImage = "url('images/bg-800.jpg')";
+        }
+        else if (timeLeft === 500) {
+            document.body.style.backgroundImage = "url('images/bg-500.jpg')";
+        }
+        else if (timeLeft === 300) {
+            document.body.style.backgroundImage = "url('images/bg-300.jpg')";
+        }
+        else if (timeLeft === 0) {
             playBuzzSound();
             document.body.style.backgroundImage = "url('images/alarm-bg.jpg')";
             clearInterval(interval)
@@ -55,14 +72,13 @@ function startTimer() {
             startElement.style.visibility = "hidden"
             stopElement.style.visibility = "hidden"
             resetElement.style.visibility = "hidden"
-
             stopBuzzButton.style.visibility = "visible"
-
-
             timeLeft = 1500;
 
             updateTimer()
         }
+
+
     }, 1000);
 }
 function stopTimer() {
