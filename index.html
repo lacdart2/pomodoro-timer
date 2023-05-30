@@ -20,14 +20,16 @@
     </div> -->
     <div class="container">
         <h1 class="title" id="title">Pomodoro Timer</h1>
-        <p class="timer" id="timer">25:00</p>
+        <p class="timer break-timer" id="timer">25:00</p>
+
         <button id="stopButton">
             <i class="fa-solid fa-bell-slash"></i>
         </button>
         <div class="button-wrapper">
-            <button id="start">Start</button>
-            <button id="stop">Stop</button>
-            <button id="reset">Reset</button>
+            <button class="start-break" id="start">Start</button>
+            <button class="stop-break" id="stop">Stop</button>
+            <button class="reset-break" id="reset">Reset</button>
+            <!--    <button id="start-break">Start Break</button> -->
         </div>
         <audio id="buzzSound" src="/sound/buzzer.mp3"></audio>
         <div class="social">
@@ -42,6 +44,7 @@
     </div>
 
     <script src="/script.js"></script>
+    <!--    <script src="/test.js"></script> -->
 </body>
 
 </html>

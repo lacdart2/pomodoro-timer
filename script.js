@@ -1,15 +1,15 @@
-
+const timerElement = document.getElementById("timer")
+const titleElement = document.getElementById("title")
 const startElement = document.getElementById("start")
 const stopElement = document.getElementById("stop")
 const resetElement = document.getElementById("reset")
-const timerElement = document.getElementById("timer")
-const titleElement = document.getElementById("title")
+
 
 
 
 
 let interval;
-let timeLeft = 1500;
+let timeLeft = 8;
 
 function updateTimer() {
     let minutes = Math.floor(timeLeft / 60);
@@ -29,7 +29,7 @@ function playBuzzSound() {
 const stopBuzzButton = document.getElementById('stopButton');
 const buzzSound = document.getElementById('buzzSound');
 
-stopButton.addEventListener('click', () => {
+stopBuzzButton.addEventListener('click', () => {
     buzzSound.pause();
     buzzSound.currentTime = 0; // Reset the audio to the beginning
     stopBuzzButton.style.visibility = "hidden";
@@ -37,6 +37,7 @@ stopButton.addEventListener('click', () => {
     stopElement.style.visibility = "visible"
     resetElement.style.visibility = "visible"
     titleElement.innerText = "Pomodoro Timer"
+
     titleElement.style.fontSize = "36px";
 });
 
@@ -47,14 +48,19 @@ function startTimer() {
 
         if (timeLeft === 0) {
             playBuzzSound();
+            document.body.style.backgroundImage = "url('images/alarm-bg.jpg')";
             clearInterval(interval)
-            titleElement.innerText = "Time IS UP!"
+            titleElement.innerText = "Break Time!"
             titleElement.style.fontSize = "50px";
             startElement.style.visibility = "hidden"
             stopElement.style.visibility = "hidden"
             resetElement.style.visibility = "hidden"
+
             stopBuzzButton.style.visibility = "visible"
+
+
             timeLeft = 1500;
+
             updateTimer()
         }
     }, 1000);
@@ -72,6 +78,9 @@ function resetTimer() {
     buzzSound.stop();
 }
 
+
+
 startElement.addEventListener("click", startTimer)
 stopElement.addEventListener("click", stopTimer)
 resetElement.addEventListener("click", resetTimer)
+

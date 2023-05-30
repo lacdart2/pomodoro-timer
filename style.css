@@ -84,6 +84,7 @@ a {
           display: flex;
           flex-direction: column;
           min-width: 80%;
+          flex-wrap: wrap;
 }
 button {
           padding: 10px 20px;
@@ -148,7 +149,11 @@ button:hover {
           animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) 6
                     both;
 }
-
+/* #start-break {
+          display: none;
+          width: 100%;
+          background-color: #0aabf5;
+} */
 @-webkit-keyframes scale-up-center {
           0% {
                     -webkit-transform: scale(0.5);
@@ -175,9 +180,6 @@ button:hover {
           .button-wrapper {
                     flex-direction: row;
                     justify-content: space-between; /* Adjust as per your requirements */
-          }
-          .container {
-                    /*       min-height: 80vh; */
           }
 }
 
